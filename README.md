@@ -1,2 +1,2 @@
 # Deer
-a game about Deer
+a game about deer
