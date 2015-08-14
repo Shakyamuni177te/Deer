@@ -1,0 +1,181 @@
+ stage_0: 
+ TextWindow.Writeline("You are a deer. Your nose is itchy.") 
+ TextWindow.Writeline("What do you do?") 
+ choices="ITCH,NOTHING" 
+Choose() 
+If id = 1 Then 
+  Goto stage_1_1 
+ElseIf id = 2 Then 
+  Goto stage_0
+Else 
+  TextWindow.WriteLine("Invalid choice.") 
+  Goto stage_0 
+EndIf
+  stage_1_1: 
+TextWindow.Writeline("Your nose stops itching. :) You are in a forest. To the left is a clearing. The path to the right runs deeper into the forest.") 
+TextWindow.Writeline("Where do you go?")
+choices="LEFT, RIGHT" 
+Choose() 
+If id = 1 Then 
+  Goto stage_1_2 
+ElseIf id = 2 Then 
+  Goto stage_1_9
+Else 
+  TextWindow.WriteLine("Invalid choice.") 
+  Goto stage_1_1   
+EndIf
+stage_1_1b: 
+TextWindow.Writeline("You are in a forest. To the left is a clearing. The path to the right runs deeper into the forest.") 
+TextWindow.Writeline("Where do you go?")
+choices="LEFT, RIGHT" 
+Choose() 
+If id = 1 Then 
+  Goto stage_1_2 
+ElseIf id = 2 Then 
+  Goto stage_1_9
+Else 
+  TextWindow.WriteLine("Invalid choice.") 
+  Goto stage_1_1   
+EndIf
+stage_1_2: 
+TextWindow.Writeline("You turn left into a clearing. The sunlight feels pleasant on your antlers and fur. You hear a noise in the undergrowth.") 
+TextWindow.Writeline("Do you:")
+choices="INVESTIGATE,LISTEN,GO_BACK" 
+Choose() 
+If id = 1 Then 
+  Goto stage_1_3
+ElseIf id = 2 Then 
+  Goto stage_1_4
+ElseIf id = 3 Then 
+  Goto stage_1_1b
+Else 
+  TextWindow.WriteLine("Invalid choice.") 
+  Goto stage_1_2   
+ EndIf 
+stage_1_3:
+TextWindow.Writeline("You don't find the source of the noise, but there is some tasty looking undergrowth..") 
+TextWindow.Writeline("Do you:") 
+choices="EAT,LEAVE" 
+Choose() 
+If id = 1 Then 
+  Goto stage_1_7
+ElseIf id = 2 Then 
+  Goto stage_1_A
+Else 
+  TextWindow.WriteLine("Invalid choice.") 
+  Goto stage_1_3   
+ EndIf 
+stage_1_4:
+TextWindow.Writeline("You can't hear anything anymore, but you could still investigate the place where the sound was.") 
+TextWindow.Writeline("Do you want to:") 
+choices="INVESTIGATE,LEAVE"
+Choose() 
+If id = 1 Then 
+  Goto stage_1_3
+ElseIf id = 2 Then 
+Goto stage_1_8
+Else 
+  TextWindow.WriteLine("Invalid choise.") 
+  Goto stage_1_4   
+EndIf 
+stage_1_5:
+TextWindow.Writeline("The foal is nervous and eyes you with uncertainty as you approatch.") 
+TextWindow.Writeline("His eyes are deep brown.") 
+TextWindow.Writeline("Do you?") 
+Choose()
+choices="LICK,NUZZLE,PLAY"
+If id = 1 Then 
+  Goto stage_1_B
+ElseIf id = 2 Then 
+  Goto stage_1_9
+ElseIf id = 3 Then 
+  Goto stage_1_6
+Else 
+  TextWindow.WriteLine("Invalid choise.") 
+  Goto stage_1_5
+ EndIf 
+stage_1_6:
+TextWindow.Writeline("The foal prances up and down. You're pretty sure he's imitating you.") 
+TextWindow.Writeline("Have a nice day.")
+stage_1_7:
+TextWindow.Writeline("You feel full. You hear another noise behind you.") 
+TextWindow.Writeline("***press any enter to continue***")
+choices=""
+Choose() 
+   Goto stage_1_A
+stage_1_8:
+TextWindow.Writeline("The foal bleats at you but stays where he is.") 
+TextWindow.Writeline("Do you:")
+Choose() 
+choices="APPROACH,STAY_BACK"
+If id = 1 Then 
+  Goto stage_1_5
+ElseIf id = 2 Then 
+  Goto stage_1_8
+Else 
+  TextWindow.WriteLine("Invalid choise.") 
+  Goto stage_1_8 
+ EndIf 
+stage_1_9:
+TextWindow.Writeline("The foal jumps backwards as you try to nuzzle him.") 
+TextWindow.Writeline("Have a nice day.")
+stage_1_A:
+TextWindow.Writeline("You turn around to see a young foal. He bleats and you understand he means his name is Timothy.") 
+TextWindow.Writeline("Do you:")
+Choose() 
+choices="APPROACH,STAY_BACK"
+If id = 1 Then 
+  Goto stage_1_5
+ElseIf id = 2 Then 
+  Goto stage_1_8
+Else 
+  TextWindow.WriteLine("Invalid choise.") 
+  Goto stage_1_A 
+EndIf 
+stage_1_B:
+TextWindow.Writeline("The foal lets you lick him, but doesn't move.") 
+TextWindow.Writeline("Have a nice day!")
+end: 
+  TextWindow.Writeline("") 
+' end of program 
+Sub Choose 
+' param choices - e.g. "A,B,C" 
+' return id - e.g. 1 for A 
+' work a,c,choice,i,len,n,p,u - will be broken 
+
+  ' Make array of choice  
+  len = Text.GetLength(choices) 
+  p = 1 
+  i = 0 
+  While p <= len 
+    c = Text.GetIndexOf(Text.GetSubTextToEnd(choices,p), ",") 
+    If c = 0 Then 
+      c = len + 1 
+    Else 
+      c = c + p - 1 
+    EndIf 
+    i = i + 1 
+    choice[i] = Text.GetSubText(choices, p, c - p) 
+    p = c + 1 
+  EndWhile 
+  ' Dispaly choices  
+  n = i 
+  For i = 1 To n 
+    TextWindow.Write(choice[i]) 
+    If i < n - 1 Then 
+      TextWindow.Write(" ") 
+    ElseIf i = n - 1 Then 
+      TextWindow.Write(" or ") 
+    EndIf 
+EndFor 
+TextWindow.WriteLine("") 
+' Input 
+a = TextWindow.Read() 
+' Convert to upper case 
+u = Text.ConvertToUpperCase(a) 
+' Search id of choces 
+id = n 
+While choice[id] <> u And 0 < id 
+   id = id - 1 
+   EndWhile 
+EndSub 
