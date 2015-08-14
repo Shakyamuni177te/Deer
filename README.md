@@ -8,6 +8,7 @@ Currently at 12 user-available dialogues
 ###Windows
 
 First download and install GiT for Windows: <a href src="https://git-scm.com/download/win"> https://git-scm.com/download/win</a></br>
+Then install <a href src="http://download.microsoft.com/download/3/6/8/3684D9A0-C25C-4F50-96E2-2BB1DFA146E7/SmallBasic.en_us.msi">http://download.microsoft.com/download/3/6/8/3684D9A0-C25C-4F50-96E2-2BB1DFA146E7/SmallBasic.en_us.msi</a>
 Go to the seach bar in Windows and type ```command prompt``` to open the terminal </br>
 Then type: ```git clone https://github.com/Shakyamuni177te/Deer``` at the command prompt </br>
 Then type: ```cd Deer``` </br>
