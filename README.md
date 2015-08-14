@@ -18,15 +18,15 @@ Then: ```deergame``` </br>
 
 The game should start straight away.
 
-###Updates
+##Updates
 
 Type ```git pull``` when in the Deer directory to update the game when new versions are released.
 
-###Facebook page
+##Facebook page
 
 Facebook page for <a href src="https://www.facebook.com/pages/Deer-Simulator/">Dear Simulator</a>
 
-### Fermented fruit plot
+## Fermented fruit plot
 
 Help with additional fermented fruit plot given by Charlie Marshall
 
