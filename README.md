@@ -3,7 +3,7 @@
 <p>a text-based game about being a deer /\ coded in Small BASIC</p></br>
 <p><i>"the feeling of the wilderness is ever present"</i> - probably not Damon Alburn
 
-Currently at 12 user-available dialogues
+Currently at 12 user-available dialogues - go left!
 
 ## Installation
 
