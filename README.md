@@ -12,7 +12,7 @@ Then install Small BASIC from: <a href src="http://download.microsoft.com/downlo
 Go to the seach bar in Windows and type: ```command prompt``` to open the terminal </br>
 Then type: ```git clone https://github.com/Shakyamuni177te/Deer``` at the command prompt </br>
 Then type: ```cd Deer``` </br>
-Then: ```deargame``` </br>
+Then: ```deergame``` </br>
 
 The game should start straight away.
 
