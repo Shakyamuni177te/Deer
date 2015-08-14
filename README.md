@@ -24,7 +24,7 @@ Type ```git pull``` when in the Deer directory to update the game when new versi
 
 ##Facebook page
 
-Facebook page for <a href src="https://www.facebook.com/pages/Deer-Simulator/">Dear Simulator</a>
+Facebook page for <a href src="https://www.facebook.com/pages/Deer-Simulator/">Deer Simulator</a>
 
 ## Fermented fruit plot
 
