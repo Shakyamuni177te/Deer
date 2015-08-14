@@ -14,3 +14,7 @@ Then type: ```cd Deer``` </br>
 Then: ```deargame``` </br>
 
 The game should start straight away.
+
+###Updates
+
+Type ```git pull' when in the Deer directory to update the game when new versions are released.
