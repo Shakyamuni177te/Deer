@@ -23,6 +23,11 @@ The game should start straight away.
 Type ```git pull``` when in the Deer directory to update the game when new versions are released.
 
 
+### Fermented fruit plot
+
+Help with additional fermented fruit plot given by Charlie Marshall
+
+
 ###Facebook page
 
 Facebook page for <a href src="https://www.facebook.com/pages/Deer-Simulator/">Dear Simulator</a>
