@@ -1,7 +1,7 @@
 # Deer Simulator v0.0.2
 
 <p>a text-based game about being a deer /\ coded in Small BASIC</p></br>
-<p><i>"the feeling of the wilderness is ever present"</i> - probably not Damon Alburn
+<p><i>"the feeling of the wilderness is ever present"</i> - probably not Damon Alburn</p></br>
 
 Currently at 12 user-available dialogues - go left!
 
