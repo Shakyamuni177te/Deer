@@ -1,5 +1,6 @@
 # Deer Simulator
 a text-based game about being a deer /\ coded in Small BASIC
+v0.0.2
 
 Currently at 12 user-available dialogues
 
