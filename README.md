@@ -1,6 +1,5 @@
-# Deer Simulator
+# Deer Simulator v0.0.2
 
-<p>v0.0.2</p>
 <p>a text-based game about being a deer /\ coded in Small BASIC</p>
 
 
