@@ -1,3 +1,5 @@
+ hydrated = 0
+ 
  stage_0: 
  TextWindow.Writeline("You are a deer. Your nose is itchy.") 
  TextWindow.Writeline("What do you do?") 
@@ -14,12 +16,12 @@ EndIf
   stage_1_1: 
 TextWindow.Writeline("Your nose stops itching. :) You are in a forest. To the left is a clearing. The path to the right runs deeper into the forest.") 
 TextWindow.Writeline("Where do you go?")
-choices="LEFT, RIGHT" 
+choices="LEFT,RIGHT" 
 Choose() 
 If id = 1 Then 
   Goto stage_1_2 
 ElseIf id = 2 Then 
-  Goto stage_1_9
+  Goto stage_2_1
 Else 
   TextWindow.WriteLine("Invalid choice.") 
   Goto stage_1_1   
@@ -27,12 +29,12 @@ EndIf
 stage_1_1b: 
 TextWindow.Writeline("You are in a forest. To the left is a clearing. The path to the right runs deeper into the forest.") 
 TextWindow.Writeline("Where do you go?")
-choices="LEFT, RIGHT" 
+choices="LEFT,RIGHT" 
 Choose() 
 If id = 1 Then 
   Goto stage_1_2 
 ElseIf id = 2 Then 
-  Goto stage_1_9
+  Goto stage_2_1
 Else 
   TextWindow.WriteLine("Invalid choice.") 
   Goto stage_1_1   
@@ -82,8 +84,8 @@ stage_1_5:
 TextWindow.Writeline("The foal is nervous and eyes you with uncertainty as you approatch.") 
 TextWindow.Writeline("His eyes are deep brown.") 
 TextWindow.Writeline("Do you?") 
-Choose()
 choices="LICK,NUZZLE,PLAY"
+Choose()
 If id = 1 Then 
   Goto stage_1_B
 ElseIf id = 2 Then 
@@ -106,8 +108,8 @@ Choose()
 stage_1_8:
 TextWindow.Writeline("The foal bleats at you but stays where he is.") 
 TextWindow.Writeline("Do you:")
-Choose() 
 choices="APPROACH,STAY_BACK"
+Choose() 
 If id = 1 Then 
   Goto stage_1_5
 ElseIf id = 2 Then 
@@ -122,8 +124,8 @@ TextWindow.Writeline("Have a nice day.")
 stage_1_A:
 TextWindow.Writeline("You turn around to see a young foal. He bleats and you understand he means his name is Timothy.") 
 TextWindow.Writeline("Do you:")
-Choose() 
 choices="APPROACH,STAY_BACK"
+Choose() 
 If id = 1 Then 
   Goto stage_1_5
 ElseIf id = 2 Then 
@@ -135,6 +137,68 @@ EndIf
 stage_1_B:
 TextWindow.Writeline("The foal lets you lick him, but doesn't move.") 
 TextWindow.Writeline("Have a nice day!")
+stage_2_1:
+TextWindow.Writeline("You move deeper into the woods. You become thirsty.") 
+TextWindow.Writeline("Do you look for a stream, carry on or go back?")
+choices="FIND_STREAM,CARRY_ON,GO_BACK"
+Choose() 
+If id = 1 Then 
+  Goto stage_2_2
+ElseIf id = 2 Then 
+  Goto stage_2_3
+ElseIf id = 2 Then 
+  Goto stage_1_1b
+Else 
+  TextWindow.WriteLine("Invalid choise.") 
+  Goto stage_2_1 
+EndIf
+stage_2_2:
+hydrated = 1
+TextWindow.Writeline("You find a stream and drink from it.") 
+TextWindow.Writeline("Carry on or go back?")
+choices="CARRY_ON,GO_BACK"
+Choose() 
+If id = 1 Then 
+  Goto stage_2_4
+ElseIf id = 2 Then 
+  Goto stage_2_3
+ElseIf id = 2 Then 
+  Goto stage_1_1b
+Else 
+  TextWindow.WriteLine("Invalid choise.") 
+  Goto stage_1_A 
+EndIf 
+stage_2_3:
+TextWindow.Writeline("You move deeper into the woods. You become thirsty.") 
+TextWindow.Writeline("Do you look for a stream, carry on or go back?")
+choices="FIND_STREAM,CARRY_ON,GO_BACK"
+Choose() 
+If id = 1 Then 
+  Goto stage_2_2
+ElseIf id = 2 Then 
+  Goto stage_2_4
+ElseIf id = 2 Then 
+  Goto stage_1_1b
+Else 
+  TextWindow.WriteLine("Invalid choise.") 
+  Goto stage_1_A 
+EndIf 
+stage_2_4:
+If hydrated = 0 Then
+  TextWindow.Writeline("You are too thirsy to carry on.")
+  TextWindow.Writeline("You have to turn back.")
+  Goto stage_1_1b
+EndIf
+TextWindow.Writeline("You carry on into the woods but the trail leads back where you started..") 
+TextWindow.Writeline("You should go back.")
+choices="GO_BACK"
+Choose() 
+  If id = 1 Then 
+    Goto stage_1_1b
+  Else 
+    TextWindow.WriteLine("Invalid choise.") 
+    Goto stage_2_4 
+EndIf 
 end: 
   TextWindow.Writeline("") 
 ' end of program 
