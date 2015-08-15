@@ -6,6 +6,8 @@
 <ul>
 <li>16 user-available dialogues!</li>
 <li>Find water when you're thirsy!</li>
+<li>Keep your foal happy and interested!</li>
+<li>Find other deer and make friends!</li>
 </ul>
 
 ## Installation
