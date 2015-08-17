@@ -1,0 +1,47 @@
+.nav {
+  left: 10%;
+}
+
+.nav a {
+  color: #737373;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
+}
+
+.nav li {
+  display: inline;
+  left: 10%;
+}
+
+.jumbotron {
+  background-color: #105241;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron .container {
+  left: 10%;
+  position: relative;
+  top:100px;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  left: 10%;
+  font-size: 48px;
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  left: 10%;
+  font-size: 20px;
+  color: #fff;
+}
+
+.col-md-4 {
+  left: 10%;
+}
