@@ -1,9 +1,15 @@
-# Super Deer Simulator v0.0.2
+# Super Deer Simulator v0.0.3
 
 <p>a text-based game about being a deer /\ coded in Small BASIC</p></br>
 <p><i>"the feeling of the wilderness is ever present"</i> - probably not Damon Alburn</p></br>
-
-Currently at 12 user-available dialogues - go left!
+<p>Features:</p>
+<ul>
+<li>16 user-available dialogues!</li>
+<li>Find water when you're thirsy!</li>
+<li>Keep your foal happy and entertained!</li>
+<li>Find other deer and make friends!</li>
+<li>Eat fermented grapes!</li>
+</ul>
 
 ## Installation
 
